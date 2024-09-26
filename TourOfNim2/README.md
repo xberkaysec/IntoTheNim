@@ -1,10 +1,10 @@
-# Çizim Temelleri: Doğru Çizme Yöntemleri
+# Çizim Temelleri: Line(çizgi) Çizme Yöntemleri
 
-## 1. Doğru Nedir?
+## Line Nedir?
 
-Bir doğru, bitişik noktaların bir dizisidir. 
-Bu yazıda, iki temel doğru türüne odaklanacağız: Yatay ve Dikey doğrular. 
-Bu doğruları nokta nokta çizerken, yalnızca bir koordinat değişirken diğeri sabit kalır.
+Bir line, bitişik noktaların bir dizisidir. 
+Bu yazıda, iki temel doğru türüne odaklanacağız: Yatay ve Dikey line. 
+Bu çizgileri nokta nokta çizerken, yalnızca bir koordinat değişirken diğeri sabit kalır.
 
 ## 2. Nokta Tanımı
 
@@ -33,24 +33,96 @@ Resim :
 
 ![Resim](https://i.ibb.co/sjF2zFF/Project-Canvas.png)
 
-## 3. Yatay ve Dikey Doğru Çizimi
+## 2.1.1. Bir Nokta, Uzunluk ve Yön Kullanarak Çizgi Çizimi
 
-Bir doğru, başlangıç ve bitiş noktasıyla ya da bir başlangıç noktası ile uzunluğu ve yönü ile tanımlanabilir. Her iki yaklaşımı da inceleyeceğiz.
+Bir çizgiyi tanımlamak için başlangıç noktası, uzunluğu ve yönü kullanabiliriz. 
+Bu bilgilerle, bir çizgiyi piksel piksel çizebiliriz. 
 
-1. Yatay Doğru Çizimi
+1. Tanımlar
 
-Yatay bir doğru çizmek için, y koordinatı sabit kalırken x koordinatını değiştiririz. Örneğin:
+- Uzunluk: Pozitif bir tam sayı olmalıdır. Sıfır, bir noktayı temsil eder; negatif değer fiziksel olarak mümkün değildir.
+- Yön: Yatay veya dikey olabilir.
 
-- Başlangıç noktası: (x1, y)
-- Bitiş noktası: (x2, y)
+Bu durumda, çizgileri her zaman soldan sağa (x koordinatını artırarak) veya üstten aşağıya (y koordinatını artırarak) oluşturmayı sınırlıyoruz.
 
-Bu durumda, y değeri sabit kalır ve x değeri başlangıç noktasından bitiş noktasına kadar artar.
+## Yatay ve Dikey Çizgi Çizme Prosedürleri
 
-2. Dikey Doğru Çizimi
+Aşağıda, yatay ve dikey çizgileri çizen iki benzer prosedür tanımlanmıştır:
 
-Dikey bir doğru çizmek için ise, x koordinatı sabit kalırken y koordinatını değiştiririz. Örneğin:
+```nim
+import pixels
 
-- Başlangıç noktası: (x, y1)
-- Bitiş noktası: (x, y2)
+type 
+    Point = object
+        x: int
+        y: int
 
-Bu durumda, x değeri sabit kalır ve y değeri başlangıç noktasından bitiş noktasına kadar artar.
+proc horizontalLine(start: Point; length: Positive) = 
+  for delta in 0 .. length: 
+    putPixel(start.x + delta, start.y) 
+
+proc verticalLine(start: Point; length: Positive) =
+    for delta in 0 .. length:
+        putPixel(start.x, start.y + delta)
+
+let p = Point(x: 10, y: 10)
+horizontalLine(p, 80)
+verticalLine(p, 80) 
+```
+
+## Kod Açıklaması
+
+1. Modül İçe Aktarma:
+
+```nim
+import pixels
+```
+
+Bu satır, pixels modülünü içe aktarır. 
+Bu modül, ekrandaki piksellerin işlenmesi için gereken işlevleri sağlar.
+
+2. Veri Tipi Tanımlaması:
+
+```nim
+type 
+    Point = object
+        x: int
+        y: int
+```
+
+Bu bölümde, Point adında yeni bir veri tipi tanımlanır. 
+Bu veri tipi, bir noktanın x ve y koordinatlarını tutmak için kullanılır.
+
+3. Yatay Çizgi Çizme İşlevi:
+   
+```nim
+proc horizontalLine(start: Point; length: Positive) = 
+  for delta in 0 .. length: 
+    putPixel(start.x + delta, start.y)
+```
+
+Bu işlev, verilen başlangıç noktasından (start) başlayarak, belirtilen uzunluk (length) kadar yatay bir çizgi çizer. 
+Her bir nokta, putPixel fonksiyonu kullanılarak işlenir.
+
+4. Dikey Çizgi Çizme İşlevi:
+
+```nim
+proc verticalLine(start: Point; length: Positive) =
+    for delta in 0 .. length:
+        putPixel(start.x, start.y + delta)
+```
+
+Bu işlev, verilen başlangıç noktasından (start) başlayarak, belirtilen uzunluk (length) kadar dikey bir çizgi çizer. 
+Her bir nokta, putPixel fonksiyonu kullanılarak işlenir.
+
+5. Örneklendirme ve Çizim:
+   
+```nim
+let p = Point(x: 10, y: 10)
+horizontalLine(p, 80)
+verticalLine(p, 80)
+```
+
+Bu son bölümde, yeni bir Point nesnesi p oluşturulur ve koordinatları (10, 10) olarak ayarlanır. 
+Daha sonra, horizontalLine ve verticalLine işlevleri, p noktasından başlayarak 80 piksel uzunluğunda yatay ve dikey çizgiler çizmek için çağrılır.
+

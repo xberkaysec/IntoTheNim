@@ -29,6 +29,10 @@ putPixel(p.x, p.y)
 3. p değişkeni, (5, 7) koordinatlarına sahip bir Point nesnesinin örneğidir.  
 4. Bir nesnenin alanlarına nokta ile erişebiliriz; bu örnekte, p noktasının x ve y koordinatlarına p.x ve p.y ile erişiyoruz.
 
+Resim : 
+
+![Resim](https://i.ibb.co/sjF2zFF/Project-Canvas.png)
+
 ## 3. Yatay ve Dikey Doğru Çizimi
 
 Bir doğru, başlangıç ve bitiş noktasıyla ya da bir başlangıç noktası ile uzunluğu ve yönü ile tanımlanabilir. Her iki yaklaşımı da inceleyeceğiz.

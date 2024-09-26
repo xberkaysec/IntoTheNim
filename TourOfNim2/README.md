@@ -126,3 +126,6 @@ verticalLine(p, 80)
 Bu son bölümde, yeni bir Point nesnesi p oluşturulur ve koordinatları (10, 10) olarak ayarlanır. 
 Daha sonra, horizontalLine ve verticalLine işlevleri, p noktasından başlayarak 80 piksel uzunluğunda yatay ve dikey çizgiler çizmek için çağrılır.
 
+Resim : 
+
+![Resim](https://i.ibb.co/Cvk3dg0/resim-2024-09-26-155539643.png)

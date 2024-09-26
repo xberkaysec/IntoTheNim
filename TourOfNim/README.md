@@ -46,3 +46,7 @@ Resim :
 ![Resim](https://i.ibb.co/2NLkYx6/Nim-Project-1.png)
 
 ![Resim](https://i.ibb.co/x3HKV3b/resim-2024-09-26-141518398.png)
+
+Çıktı :
+
+![Çıktı](https://i.ibb.co/4pb0hTT/resim-2024-09-26-141641149.png)

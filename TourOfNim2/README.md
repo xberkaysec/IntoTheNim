@@ -129,4 +129,3 @@ Daha sonra, horizontalLine ve verticalLine işlevleri, p noktasından başlayara
 Resim : 
 
 ![Resim](https://i.ibb.co/Cvk3dg0/resim-2024-09-26-155539643.png)
-

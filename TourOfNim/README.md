@@ -18,4 +18,26 @@ nimble install pixels
 
 Bu komut, pixels kütüphanesini sisteminize yükleyecek ve kullanımınıza hazır hale getirecektir.
 
+# Temel Kavramlar
+
+## 1. Grafik Primitifleri ile Şekiller Oluşturma
+
+Nim dilinde temel grafik işlemleri yapabilmek için bazı temel kavramları öğrenmeniz gerekecek. 
+Bu bölümde, putPixel prosedürünü kullanarak grafik üzerinde nasıl şekiller oluşturabileceğinizi göstereceğiz.
+
+## putPixel Prosedürü
+
+putPixel prosedürü, belirli bir koordinatta bir piksel yerleştirmek için kullanılır. 
+Bu prosedürün nasıl kullanılacağını aşağıdaki örneklerle açıklayalım:
+
+```nim
+import pixels  # 1
+
+putPixel(5, 9)  # 2
+putPixel(11, 18, Red)  # 3
+```
+
+- 1. pixels kütüphanesini içe aktararak putPixel prosedürünü kullanabiliriz.
+- 2. (5, 9) koordinatına varsayılan beyaz renk (default: white) ile bir piksel yerleştirir.
+- 3. (11, 18) koordinatına kırmızı (Red) bir piksel yerleştirir.
 

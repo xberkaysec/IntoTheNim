@@ -33,7 +33,7 @@ Resim :
 
 ![Resim](https://i.ibb.co/sjF2zFF/Project-Canvas.png)
 
-## 2.1.1. Bir Nokta, Uzunluk ve Yön Kullanarak Çizgi Çizimi
+## 2.1.1. Bir Point ve Uzunluk
 
 Bir çizgiyi tanımlamak için başlangıç noktası, uzunluğu ve yönü kullanabiliriz. 
 Bu bilgilerle, bir çizgiyi piksel piksel çizebiliriz. 
@@ -129,3 +129,4 @@ Daha sonra, horizontalLine ve verticalLine işlevleri, p noktasından başlayara
 Resim : 
 
 ![Resim](https://i.ibb.co/Cvk3dg0/resim-2024-09-26-155539643.png)
+

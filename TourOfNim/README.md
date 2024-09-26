@@ -41,3 +41,8 @@ putPixel(11, 18, Red)  # 3
 - 2. (5, 9) koordinatına varsayılan beyaz renk (default: white) ile bir piksel yerleştirir.
 - 3. (11, 18) koordinatına kırmızı (Red) bir piksel yerleştirir.
 
+Resim : 
+
+![Resim](https://i.ibb.co/2NLkYx6/Nim-Project-1.png)
+
+![Resim](https://i.ibb.co/x3HKV3b/resim-2024-09-26-141518398.png)
